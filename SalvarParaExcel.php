@@ -173,177 +173,177 @@ $objDrawing->setName('Logo');
 $objDrawing->setDescription('Logo');
 $logo = 'psg.jpg'; // Provide path to your logo file
 $objDrawing->setPath($logo);  //setOffsetY has no effect
-$objDrawing->setCoordinates('B2');
+$objDrawing->setCoordinates('A2');
 $objDrawing->setWorksheet($objPHPExcel->getActiveSheet()); 
 $objDrawing->setOffsetX(35);
 
 //tamanho da linha
 $objPHPExcel->getActiveSheet()->getRowDimension(2)->setRowHeight(60); 
 
-$setSheet->mergeCells('B2:C2');
-$setSheet->mergeCells('D2:M2');
-$setSheet->mergeCells('N2:O2');
+$setSheet->mergeCells('A2:B2');
+$setSheet->mergeCells('C2:L2');
+$setSheet->mergeCells('M2:N2');
 
-$getSheet->setCellValue("D2", "REGISTRO DE ATIVIDADES");
-$getSheet->setCellValue("N2", "DEV-100");
+$getSheet->setCellValue("C2", "REGISTRO DE ATIVIDADES");
+$getSheet->setCellValue("M2", "DEV-100");
 
 //Estilos
-$getSheet->getStyle('B2:O2')->applyFromArray($style);
-$getSheet->getStyle('B2:O2')->getFont()->setSize(16);
-$getSheet->getStyle('B2:O2')->getFont()->setBold(true);
+$getSheet->getStyle('A2:N2')->applyFromArray($style);
+$getSheet->getStyle('A2:N2')->getFont()->setSize(16);
+$getSheet->getStyle('A2:N2')->getFont()->setBold(true);
 
 
 //***********************Identifição do Cliente******************************
 
-$setSheet->mergeCells('B4:O4');//titulo
-$setSheet->mergeCells('B5:C5');//empresa
-$setSheet->mergeCells('D5:H5');//area empresa
-$setSheet->mergeCells('I5:J5');//contato
-$setSheet->mergeCells('K5:O5');//area contato
-$setSheet->mergeCells('B6:C6');//telefone
-$setSheet->mergeCells('D6:H6');//area telefone
-$setSheet->mergeCells('I6:J6');//email
-$setSheet->mergeCells('K6:O6');//area email
-$setSheet->mergeCells('B7:C7');//area
-$setSheet->mergeCells('D7:O7');//area area
+$setSheet->mergeCells('A4:N4');//titulo
+$setSheet->mergeCells('A5:B5');//empresa
+$setSheet->mergeCells('C5:G5');//area empresa
+$setSheet->mergeCells('H5:I5');//contato
+$setSheet->mergeCells('J5:N5');//area contato
+$setSheet->mergeCells('A6:B6');//telefone
+$setSheet->mergeCells('C6:G6');//area telefone
+$setSheet->mergeCells('H6:I6');//email
+$setSheet->mergeCells('J6:N6');//area email
+$setSheet->mergeCells('A7:B7');//area
+$setSheet->mergeCells('C7:N7');//area area
 
-$getSheet->setCellValue("B4", "Identificação do Cliente");
-$getSheet->setCellValue("B5", "Empresa:");
-$getSheet->setCellValue("I5", "Contato:");
-$getSheet->setCellValue("B6", "Telefone:");
-$getSheet->setCellValue("I6", "E-Mail:");
-$getSheet->setCellValue("B7", "Área:");
+$getSheet->setCellValue("A4", "Identificação do Cliente");
+$getSheet->setCellValue("A5", "Empresa:");
+$getSheet->setCellValue("H5", "Contato:");
+$getSheet->setCellValue("A6", "Telefone:");
+$getSheet->setCellValue("H6", "E-Mail:");
+$getSheet->setCellValue("A7", "Área:");
 
 //Estilos
-$getSheet->getStyle('B4')->applyFromArray($color);
-$getSheet->getStyle('B4')->applyFromArray($style);
-$getSheet->getStyle('B4')->getFont()->setBold(true);
-$getSheet->getStyle('B5')->getFont()->setBold(true);
-$getSheet->getStyle('I5')->getFont()->setBold(true);
-$getSheet->getStyle('B6')->getFont()->setBold(true);
-$getSheet->getStyle('I6')->getFont()->setBold(true);
-$getSheet->getStyle('B7')->getFont()->setBold(true);
-$getSheet->getStyle('D6')->applyFromArray($esquerda);
+$getSheet->getStyle('A4')->applyFromArray($color);
+$getSheet->getStyle('A4')->applyFromArray($style);
+$getSheet->getStyle('A4')->getFont()->setBold(true);
+$getSheet->getStyle('A5')->getFont()->setBold(true);
+$getSheet->getStyle('H5')->getFont()->setBold(true);
+$getSheet->getStyle('A6')->getFont()->setBold(true);
+$getSheet->getStyle('H6')->getFont()->setBold(true);
+$getSheet->getStyle('A7')->getFont()->setBold(true);
+$getSheet->getStyle('C6')->applyFromArray($esquerda);
 
 //Variáveis
-$getSheet->setCellValue("D5", "$empresa");
-$getSheet->setCellValue("K5", "$contato");
-$getSheet->setCellValue("D6", "$telefone");
-$getSheet->setCellValue("K6", "$email_cliente");
-$getSheet->setCellValue("D7", "$area");
+$getSheet->setCellValue("C5", "$empresa");
+$getSheet->setCellValue("J5", "$contato");
+$getSheet->setCellValue("C6", "$telefone");
+$getSheet->setCellValue("J6", "$email_cliente");
+$getSheet->setCellValue("C7", "$area");
 
 //Deixar desprotegido
-$getSheet->getStyle('D5')->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('K5')->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('D6')->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('K6')->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('D7')->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('C5')->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('J5')->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('C6')->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('J6')->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('C7')->getProtection()->setLocked($desprotegido);
 
 
 
 //***********************Identifição do Serviço******************************
 
-$setSheet->mergeCells('B8:O8');//titulo
-$setSheet->mergeCells('B9:C9');//codigo
-$setSheet->mergeCells('D9:O9');//area codigo
-$setSheet->mergeCells('B10:C10');//nome atividade
-$setSheet->mergeCells('D10:K10');//area nome atividade
-$setSheet->mergeCells('L10:N10');//numero registro
-$setSheet->mergeCells('B11:C11');//modulos
-$setSheet->mergeCells('D11:O11');//area modulos
-$setSheet->mergeCells('B12:C12');//analista
-$setSheet->mergeCells('D12:O12');//area analista
-$setSheet->mergeCells('B13:C13');//Telefone
-$setSheet->mergeCells('D13:H13');//area telefone
+$setSheet->mergeCells('A8:N8');//titulo
+$setSheet->mergeCells('A9:B9');//codigo
+$setSheet->mergeCells('C9:N9');//area codigo
+$setSheet->mergeCells('A10:B10');//nome atividade
+$setSheet->mergeCells('C10:J10');//area nome atividade
+$setSheet->mergeCells('K10:M10');//numero registro
+$setSheet->mergeCells('A11:B11');//modulos
+$setSheet->mergeCells('C11:N11');//area modulos
+$setSheet->mergeCells('A12:B12');//analista
+$setSheet->mergeCells('C12:N12');//area analista
+$setSheet->mergeCells('A13:B13');//Telefone
+$setSheet->mergeCells('C13:G13');//area telefone
 //$setSheet->mergeCells('I13:J13');//email
-$setSheet->mergeCells('J13:O13');//area email
-$setSheet->mergeCells('B14:C14');//data inicio
-$setSheet->mergeCells('D14:E14');//area dt inicio
-$setSheet->mergeCells('F14:G14');//data fim
-$setSheet->mergeCells('H14:I14');//area data fim
-$setSheet->mergeCells('J14:M14');//total de horas
-$setSheet->mergeCells('N14:O14');//area total de horas
+$setSheet->mergeCells('I13:N13');//area email
+$setSheet->mergeCells('A14:B14');//data inicio
+$setSheet->mergeCells('C14:D14');//area dt inicio
+$setSheet->mergeCells('E14:F14');//data fim
+$setSheet->mergeCells('G14:H14');//area data fim
+$setSheet->mergeCells('I14:L14');//total de horas
+$setSheet->mergeCells('M14:N14');//area total de horas
 
-$getSheet->setCellValue("B8", "Identificação do Serviço");
-$getSheet->setCellValue("B9", "Código do Projeto:");
-$getSheet->setCellValue("B10", "Nome da Atividade:");
-$getSheet->setCellValue("L10", "Número do Resgistro:");
-$getSheet->setCellValue("B11", "Módulos:");
-$getSheet->setCellValue("B12", "Analista/Dev:");
-$getSheet->setCellValue("B13", "Telefone:");
-$getSheet->setCellValue("I13", "E-mail:");
-$getSheet->setCellValue("B14", "Data de Início:");
-$getSheet->setCellValue("F14", "Data de Fim:");
-$getSheet->setCellValue("J14", "Total de Horas Trabalhadas no Projeto:");
+$getSheet->setCellValue("A8", "Identificação do Serviço");
+$getSheet->setCellValue("A9", "Código do Projeto:");
+$getSheet->setCellValue("A10", "Nome da Atividade:");
+$getSheet->setCellValue("K10", "Número do Resgistro:");
+$getSheet->setCellValue("A11", "Módulos:");
+$getSheet->setCellValue("A12", "Analista/Dev:");
+$getSheet->setCellValue("A13", "Telefone:");
+$getSheet->setCellValue("H13", "E-mail:");
+$getSheet->setCellValue("A14", "Data de Início:");
+$getSheet->setCellValue("E14", "Data de Fim:");
+$getSheet->setCellValue("I14", "Total de Horas Trabalhadas no Projeto:");
 
 //Estilos
-$getSheet->getStyle('B8')->applyFromArray($color);
-$getSheet->getStyle('B8')->applyFromArray($style);
-$getSheet->getStyle('B8')->getFont()->setBold(true);
-$getSheet->getStyle('B9')->getFont()->setBold(true);
-$getSheet->getStyle('B10')->getFont()->setBold(true);
-$getSheet->getStyle('L10')->getFont()->setBold(true);
-$getSheet->getStyle('B11')->getFont()->setBold(true);
-$getSheet->getStyle('B12')->getFont()->setBold(true);
-$getSheet->getStyle('B13')->getFont()->setBold(true);
-$getSheet->getStyle('I13')->getFont()->setBold(true);
-$getSheet->getStyle('B14')->getFont()->setBold(true);
-$getSheet->getStyle('F14')->getFont()->setBold(true);
-$getSheet->getStyle('J14')->getFont()->setBold(true);
-$getSheet->getStyle('O10')->applyFromArray($esquerda);
-$getSheet->getStyle('D13')->applyFromArray($esquerda);
-$getSheet->getStyle('N14')->applyFromArray($esquerda);
+$getSheet->getStyle('A8')->applyFromArray($color);
+$getSheet->getStyle('A8')->applyFromArray($style);
+$getSheet->getStyle('A8')->getFont()->setBold(true);
+$getSheet->getStyle('A9')->getFont()->setBold(true);
+$getSheet->getStyle('A10')->getFont()->setBold(true);
+$getSheet->getStyle('K10')->getFont()->setBold(true);
+$getSheet->getStyle('A11')->getFont()->setBold(true);
+$getSheet->getStyle('A12')->getFont()->setBold(true);
+$getSheet->getStyle('A13')->getFont()->setBold(true);
+$getSheet->getStyle('H13')->getFont()->setBold(true);
+$getSheet->getStyle('A14')->getFont()->setBold(true);
+$getSheet->getStyle('E14')->getFont()->setBold(true);
+$getSheet->getStyle('I14')->getFont()->setBold(true);
+$getSheet->getStyle('N10')->applyFromArray($esquerda);
+$getSheet->getStyle('C13')->applyFromArray($esquerda);
+$getSheet->getStyle('M14')->applyFromArray($esquerda);
 
 //Variáveis
-$getSheet->setCellValue("D9", "$codigo_projeto");
-$getSheet->setCellValue("D10", "$nome_atividade");
-$getSheet->setCellValue("O10", "$numero_registro");
-$getSheet->setCellValue("D11", "$modulos");
-$getSheet->setCellValue("D12", "$analista");
-$getSheet->setCellValue("D13", "$telefone_servico");
-$getSheet->setCellValue("J13", "$email_servico");
-$getSheet->setCellValue("D14", "$data_inicio_servico");
-$getSheet->setCellValue("H14", "$data_fim_servico");
-$getSheet->setCellValue("N14", "$total_horas");
+$getSheet->setCellValue("C9", "$codigo_projeto");
+$getSheet->setCellValue("C10", "$nome_atividade");
+$getSheet->setCellValue("N10", "$numero_registro");
+$getSheet->setCellValue("C11", "$modulos");
+$getSheet->setCellValue("C12", "$analista");
+$getSheet->setCellValue("C13", "$telefone_servico");
+$getSheet->setCellValue("I13", "$email_servico");
+$getSheet->setCellValue("C14", "$data_inicio_servico");
+$getSheet->setCellValue("G14", "$data_fim_servico");
+$getSheet->setCellValue("M14", "$total_horas");
 
 //Deixar desprotegido
-$getSheet->getStyle('D9')->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('D10')->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('O10')->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('D11')->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('D12')->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('D13')->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('K13')->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('D14')->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('H14')->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('N14')->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('C9')->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('C10')->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('N10')->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('C11')->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('C12')->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('C13')->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('J13')->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('C14')->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('G14')->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('M14')->getProtection()->setLocked($desprotegido);
 
 //***********************Atividades******************************
 
-$setSheet->mergeCells('B15:O15');//titulo
-$setSheet->mergeCells('B16:C16');//data
-$setSheet->mergeCells('D16:E16');//hora Inicio
-$setSheet->mergeCells('F16:G16');//hora fim
-$setSheet->mergeCells('H16:M16');//Descrição das Atividades
-$setSheet->mergeCells('N16:O16');//Opinião do Cliente
+$setSheet->mergeCells('A15:N15');//titulo
+$setSheet->mergeCells('A16:B16');//data
+$setSheet->mergeCells('C16:D16');//hora Inicio
+$setSheet->mergeCells('E16:F16');//hora fim
+$setSheet->mergeCells('G16:L16');//Descrição das Atividades
+$setSheet->mergeCells('M16:N16');//Opinião do Cliente
 
-$getSheet->setCellValue("B15", "Atividades");
-$getSheet->setCellValue("B16", "Data");
-$getSheet->setCellValue("D16", "Hora Início");
-$getSheet->setCellValue("F16", "Hora Fim");
-$getSheet->setCellValue("H16", "Descrição do trabalho realizado");
-$getSheet->setCellValue("N16", "Opinião do cliente");
+$getSheet->setCellValue("A15", "Atividades");
+$getSheet->setCellValue("A16", "Data");
+$getSheet->setCellValue("C16", "Hora Início");
+$getSheet->setCellValue("E16", "Hora Fim");
+$getSheet->setCellValue("G16", "Descrição do trabalho realizado");
+$getSheet->setCellValue("M16", "Opinião do cliente");
 
 //Estilos
-$getSheet->getStyle('B15')->applyFromArray($color);
-$getSheet->getStyle('B15')->applyFromArray($style);
-$getSheet->getStyle('B16:O16')->applyFromArray($style);
-$getSheet->getStyle('B15')->getFont()->setBold(true);
-$getSheet->getStyle('B16')->getFont()->setBold(true);
-$getSheet->getStyle('D16')->getFont()->setBold(true);
-$getSheet->getStyle('F16')->getFont()->setBold(true);
-$getSheet->getStyle('H16')->getFont()->setBold(true);
-$getSheet->getStyle('N16')->getFont()->setBold(true);
+$getSheet->getStyle('A15')->applyFromArray($color);
+$getSheet->getStyle('A15')->applyFromArray($style);
+$getSheet->getStyle('A16:N16')->applyFromArray($style);
+$getSheet->getStyle('A15')->getFont()->setBold(true);
+$getSheet->getStyle('A16')->getFont()->setBold(true);
+$getSheet->getStyle('C16')->getFont()->setBold(true);
+$getSheet->getStyle('E16')->getFont()->setBold(true);
+$getSheet->getStyle('G16')->getFont()->setBold(true);
+$getSheet->getStyle('M16')->getFont()->setBold(true);
 
 //Variáveis
 $i=0;
@@ -368,44 +368,44 @@ for($i; $i <= 20 ; $i++) {
 			//tem q ta aqui o rolee
 			$total = $total + 17;
 			
-			$cellx = 'B'.$total.':'.'C'.$total;
+			$cellx = 'A'.$total.':'.'B'.$total;
 			$setSheet->mergeCells($cellx);//data
 
-			$cellx = 'D'.$total.':'.'E'.$total;
+			$cellx = 'C'.$total.':'.'D'.$total;
 			$setSheet->mergeCells($cellx);//hora Inicio
 
-			$cellx = 'F'.$total.':'.'G'.$total;
+			$cellx = 'E'.$total.':'.'F'.$total;
 			$setSheet->mergeCells($cellx);//hora fim
 
-			$cellx = 'H'.$total.':'.'M'.$total;
+			$cellx = 'G'.$total.':'.'L'.$total;
 			$setSheet->mergeCells($cellx);//Descrição das Atividades
 
-			$cellx = 'N'.$total.':'.'O'.$total;
+			$cellx = 'M'.$total.':'.'N'.$total;
 			$setSheet->mergeCells($cellx);//Opinião do Cliente
 
-			$celly = 'B'.$total;
+			$celly = 'A'.$total;
 			$getSheet->setCellValue($celly, "$data_atividade[$i]");
 			$getSheet->getStyle($celly)->getProtection()->setLocked($desprotegido);
 			$getSheet->getStyle($celly)->applyFromArray($style);
 
-			$celly = 'D'.$total;
+			$celly = 'C'.$total;
 			$getSheet->setCellValue($celly, "$hora_inicio_atividade[$i]");
 			$getSheet->getStyle($celly)->getProtection()->setLocked($desprotegido);
 			$getSheet->getStyle($celly)->applyFromArray($style);
 
-			$celly = 'F'.$total;
+			$celly = 'E'.$total;
 			$getSheet->setCellValue($celly, "$hora_fim_atividade[$i]");
 			$getSheet->getStyle($celly)->getProtection()->setLocked($desprotegido);
 			$getSheet->getStyle($celly)->applyFromArray($style);
 
-			$celly = 'H'.$total;
+			$celly = 'G'.$total;
 			$getSheet->setCellValue($celly, "$descricao_atividade[$i]");
 			$getSheet->getStyle($celly)->getProtection()->setLocked($desprotegido);
 			$getSheet->getRowDimension($total)->setRowHeight(-1); 
 			$getSheet->getStyle($celly)->getAlignment()->setWrapText(true);
 
 		
-			$celly = 'N'.$total;
+			$celly = 'M'.$total;
 			$getSheet->setCellValue($celly, "$opiniao_cliente[$i]");
 			$getSheet->getStyle($celly)->getProtection()->setLocked($desprotegido);
 			$getSheet->getStyle($celly)->applyFromArray($style);
@@ -419,251 +419,251 @@ for($i; $i <= 20 ; $i++) {
 //************************Pendências PSG*********************************
 
 $linha = $total + 17;
-$cellz = 'B'.$linha.':'.'O'.$linha;
+$cellz = 'A'.$linha.':'.'N'.$linha;
 $setSheet->mergeCells($cellz);//titulo
 
 
-$cellz = 'B'.($linha+1).':'.'C'.($linha+1);
+$cellz = 'A'.($linha+1).':'.'B'.($linha+1);
 $setSheet->mergeCells($cellz);//numero
 
 
-$cellz = 'B'.($linha+2).':'.'C'.($linha+2);
+$cellz = 'A'.($linha+2).':'.'B'.($linha+2);
 $setSheet->mergeCells($cellz);//area numero
 
 
-$cellz = 'D'.($linha+1).':'.'M'.($linha+1);
+$cellz = 'C'.($linha+1).':'.'L'.($linha+1);
 $setSheet->mergeCells($cellz);//pendencia
 
 
-$cellz = 'D'.($linha+2).':'.'M'.($linha+2);
+$cellz = 'C'.($linha+2).':'.'L'.($linha+2);
 $setSheet->mergeCells($cellz);//area pendencia
 
-$cellz = 'N'.($linha+1).':'.'O'.($linha+1);
+$cellz = 'M'.($linha+1).':'.'N'.($linha+1);
 $setSheet->mergeCells($cellz);//Prazo
 
 
-$cellz = 'N'.($linha+2).':'.'O'.($linha+2);
+$cellz = 'M'.($linha+2).':'.'N'.($linha+2);
 $setSheet->mergeCells($cellz);//area prazo
 
 
-$getSheet->setCellValue('B'.($linha), "Pendências PSG");
-$getSheet->setCellValue('D'.($linha+1), "Título");
-$getSheet->setCellValue('N'.($linha+1), "Prazo");
+$getSheet->setCellValue('A'.($linha), "Pendências PSG");
+$getSheet->setCellValue('C'.($linha+1), "Título");
+$getSheet->setCellValue('M'.($linha+1), "Prazo");
 
 //Variáveis
-$getSheet->setCellValue('B'.($linha+2), "$numero_pendencia_psg");
-$getSheet->setCellValue('D'.($linha+2), "$titulo_pendencia_psg");
-$getSheet->setCellValue('N'.($linha+2), "$prazo_pendencia_psg");
+$getSheet->setCellValue('A'.($linha+2), "$numero_pendencia_psg");
+$getSheet->setCellValue('C'.($linha+2), "$titulo_pendencia_psg");
+$getSheet->setCellValue('M'.($linha+2), "$prazo_pendencia_psg");
 
 //Estilos
-$getSheet->getStyle('B'.$linha)->applyFromArray($color);
-$getSheet->getStyle('B'.($linha))->applyFromArray($style);
-$getSheet->getStyle('B'.($linha))->getFont()->setBold(true);
-$getSheet->getStyle('D'.($linha+1))->getFont()->setBold(true);
-$getSheet->getStyle('N'.($linha+1))->getFont()->setBold(true);
-$getSheet->getStyle('B'.($linha+2))->applyFromArray($esquerda);
+$getSheet->getStyle('A'.$linha)->applyFromArray($color);
+$getSheet->getStyle('A'.($linha))->applyFromArray($style);
+$getSheet->getStyle('A'.($linha))->getFont()->setBold(true);
+$getSheet->getStyle('C'.($linha+1))->getFont()->setBold(true);
+$getSheet->getStyle('M'.($linha+1))->getFont()->setBold(true);
+$getSheet->getStyle('A'.($linha+2))->applyFromArray($esquerda);
 
 //Deixar desprotegido
-$getSheet->getStyle('B'.($linha+2))->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('D'.($linha+2))->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('N'.($linha+2))->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('A'.($linha+2))->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('C'.($linha+2))->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('M'.($linha+2))->getProtection()->setLocked($desprotegido);
 
 
 //*************************Pendências CLiente***********************************
 
-$cellz = 'B'.($linha+3).':'.'O'.($linha+3);
+$cellz = 'A'.($linha+3).':'.'N'.($linha+3);
 $setSheet->mergeCells($cellz);//titulo
 
 
-$cellz = 'B'.($linha+4).':'.'C'.($linha+4);
+$cellz = 'A'.($linha+4).':'.'B'.($linha+4);
 $setSheet->mergeCells($cellz);//numero
 
 
-$cellz = 'B'.($linha+5).':'.'C'.($linha+5);
+$cellz = 'A'.($linha+5).':'.'B'.($linha+5);
 $setSheet->mergeCells($cellz);//area numero
 
 
-$cellz = 'D'.($linha+4).':'.'M'.($linha+4);
+$cellz = 'C'.($linha+4).':'.'L'.($linha+4);
 $setSheet->mergeCells($cellz);//pendencia
 
 
-$cellz = 'D'.($linha+5).':'.'M'.($linha+5);
+$cellz = 'C'.($linha+5).':'.'L'.($linha+5);
 $setSheet->mergeCells($cellz);//area pendencia
 
-$cellz = 'N'.($linha+4).':'.'O'.($linha+4);
+$cellz = 'M'.($linha+4).':'.'N'.($linha+4);
 $setSheet->mergeCells($cellz);//Prazo
 
 
-$cellz = 'N'.($linha+5).':'.'O'.($linha+5);
+$cellz = 'M'.($linha+5).':'.'N'.($linha+5);
 $setSheet->mergeCells($cellz);//area prazo
 
 
-$getSheet->setCellValue('B'.($linha+3), "Pendências Cliente");
-$getSheet->setCellValue('D'.($linha+4), "Título");
-$getSheet->setCellValue('N'.($linha+4), "Prazo");
+$getSheet->setCellValue('A'.($linha+3), "Pendências Cliente");
+$getSheet->setCellValue('C'.($linha+4), "Título");
+$getSheet->setCellValue('M'.($linha+4), "Prazo");
 
 //Variáveis
-$getSheet->setCellValue('B'.($linha+5), "$numero_pendencia_cliente");
-$getSheet->setCellValue('D'.($linha+5), "$titulo_pendencia_cliente");
-$getSheet->setCellValue('N'.($linha+5), "$prazo_pendencia_cliente");
+$getSheet->setCellValue('A'.($linha+5), "$numero_pendencia_cliente");
+$getSheet->setCellValue('C'.($linha+5), "$titulo_pendencia_cliente");
+$getSheet->setCellValue('M'.($linha+5), "$prazo_pendencia_cliente");
 
 //Estilos
-$getSheet->getStyle('B'.($linha+3))->applyFromArray($color);
-$getSheet->getStyle('B'.($linha+3))->applyFromArray($style);
-$getSheet->getStyle('B'.($linha+3))->getFont()->setBold(true);
-$getSheet->getStyle('D'.($linha+4))->getFont()->setBold(true);
-$getSheet->getStyle('N'.($linha+4))->getFont()->setBold(true);
-$getSheet->getStyle('B'.($linha+5))->applyFromArray($esquerda);
+$getSheet->getStyle('A'.($linha+3))->applyFromArray($color);
+$getSheet->getStyle('A'.($linha+3))->applyFromArray($style);
+$getSheet->getStyle('A'.($linha+3))->getFont()->setBold(true);
+$getSheet->getStyle('C'.($linha+4))->getFont()->setBold(true);
+$getSheet->getStyle('M'.($linha+4))->getFont()->setBold(true);
+$getSheet->getStyle('A'.($linha+5))->applyFromArray($esquerda);
 
 //Deixar desprotegido
-$getSheet->getStyle('B'.($linha+5))->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('D'.($linha+5))->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('N'.($linha+5))->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('A'.($linha+5))->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('C'.($linha+5))->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('M'.($linha+5))->getProtection()->setLocked($desprotegido);
 
 //*************************Pendências Infra****************************************
 
-$cellz = 'B'.($linha+6).':'.'O'.($linha+6);
+$cellz = 'A'.($linha+6).':'.'N'.($linha+6);
 $setSheet->mergeCells($cellz);//titulo
 
 
-$cellz = 'B'.($linha+7).':'.'C'.($linha+7);
+$cellz = 'A'.($linha+7).':'.'B'.($linha+7);
 $setSheet->mergeCells($cellz);//numero
 
 
-$cellz = 'B'.($linha+8).':'.'C'.($linha+8);
+$cellz = 'A'.($linha+8).':'.'B'.($linha+8);
 $setSheet->mergeCells($cellz);//area numero
 
 
-$cellz = 'D'.($linha+7).':'.'M'.($linha+7);
+$cellz = 'C'.($linha+7).':'.'L'.($linha+7);
 $setSheet->mergeCells($cellz);//pendencia
 
 
-$cellz = 'D'.($linha+8).':'.'M'.($linha+8);
+$cellz = 'C'.($linha+8).':'.'L'.($linha+8);
 $setSheet->mergeCells($cellz);//area pendencia
 
-$cellz = 'N'.($linha+7).':'.'O'.($linha+7);
+$cellz = 'M'.($linha+7).':'.'N'.($linha+7);
 $setSheet->mergeCells($cellz);//Prazo
 
 
-$cellz = 'N'.($linha+8).':'.'O'.($linha+8);
+$cellz = 'M'.($linha+8).':'.'N'.($linha+8);
 $setSheet->mergeCells($cellz);//area prazo
 
 
-$getSheet->setCellValue('B'.($linha+6), "Pendências Infra");
-$getSheet->setCellValue('B'.($linha+7), "Número");
-$getSheet->setCellValue('D'.($linha+7), "Título");
-$getSheet->setCellValue('N'.($linha+7), "Data da Abertura");
+$getSheet->setCellValue('A'.($linha+6), "Pendências Infra");
+$getSheet->setCellValue('A'.($linha+7), "Número");
+$getSheet->setCellValue('C'.($linha+7), "Título");
+$getSheet->setCellValue('M'.($linha+7), "Data da Abertura");
 
 //Variáveis
-$getSheet->setCellValue('B'.($linha+8), "$numero_pendencia_infra");
-$getSheet->setCellValue('D'.($linha+8), "$titulo_pendencia_infra");
-$getSheet->setCellValue('N'.($linha+8), "$data_abertura_infra");
+$getSheet->setCellValue('A'.($linha+8), "$numero_pendencia_infra");
+$getSheet->setCellValue('C'.($linha+8), "$titulo_pendencia_infra");
+$getSheet->setCellValue('M'.($linha+8), "$data_abertura_infra");
 
 //Estilos
-$getSheet->getStyle('B'.($linha+6))->applyFromArray($color);
-$getSheet->getStyle('B'.($linha+6))->applyFromArray($style);
-$getSheet->getStyle('B'.($linha+6))->getFont()->setBold(true);
-$getSheet->getStyle('B'.($linha+7))->getFont()->setBold(true);
-$getSheet->getStyle('D'.($linha+7))->getFont()->setBold(true);
-$getSheet->getStyle('N'.($linha+7))->getFont()->setBold(true);
-$getSheet->getStyle('B'.($linha+8))->applyFromArray($esquerda);
+$getSheet->getStyle('A'.($linha+6))->applyFromArray($color);
+$getSheet->getStyle('A'.($linha+6))->applyFromArray($style);
+$getSheet->getStyle('A'.($linha+6))->getFont()->setBold(true);
+$getSheet->getStyle('A'.($linha+7))->getFont()->setBold(true);
+$getSheet->getStyle('C'.($linha+7))->getFont()->setBold(true);
+$getSheet->getStyle('M'.($linha+7))->getFont()->setBold(true);
+$getSheet->getStyle('A'.($linha+8))->applyFromArray($esquerda);
 
 //Deixar desprotegido
-$getSheet->getStyle('B'.($linha+8))->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('D'.($linha+8))->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('N'.($linha+8))->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('A'.($linha+8))->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('C'.($linha+8))->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('M'.($linha+8))->getProtection()->setLocked($desprotegido);
 
-//*************************Pendências Infra***************************************
+//*************************Observações Pendentes***************************************
 
-$cellz = 'B'.($linha+9).':'.'O'.($linha+9);
+$cellz = 'A'.($linha+9).':'.'N'.($linha+9);
 $setSheet->mergeCells($cellz);//titulo
 
 
-$cellz = 'B'.($linha+10).':'.'C'.($linha+10);
+$cellz = 'A'.($linha+10).':'.'B'.($linha+10);
 $setSheet->mergeCells($cellz);//numero
 
 
-$cellz = 'B'.($linha+11).':'.'C'.($linha+11);
+$cellz = 'A'.($linha+11).':'.'B'.($linha+11);
 $setSheet->mergeCells($cellz);//area numero
 
 
-$cellz = 'D'.($linha+10).':'.'M'.($linha+10);
+$cellz = 'C'.($linha+10).':'.'L'.($linha+10);
 $setSheet->mergeCells($cellz);//pendencia
 
 
-$cellz = 'D'.($linha+11).':'.'M'.($linha+11);
+$cellz = 'C'.($linha+11).':'.'L'.($linha+11);
 $setSheet->mergeCells($cellz);//area pendencia
 
-$cellz = 'N'.($linha+10).':'.'O'.($linha+10);
+$cellz = 'M'.($linha+10).':'.'N'.($linha+10);
 $setSheet->mergeCells($cellz);//Prazo
 
 
-$cellz = 'N'.($linha+11).':'.'O'.($linha+11);
+$cellz = 'M'.($linha+11).':'.'N'.($linha+11);
 $setSheet->mergeCells($cellz);//area prazo
 
 
-$getSheet->setCellValue('B'.($linha+9), "Observações Pendentes");
-$getSheet->setCellValue('B'.($linha+10), "Número");
-$getSheet->setCellValue('D'.($linha+10), "Título");
-$getSheet->setCellValue('N'.($linha+10), "Data da Abertura");
+$getSheet->setCellValue('A'.($linha+9), "Observações Pendentes");
+$getSheet->setCellValue('A'.($linha+10), "Número");
+$getSheet->setCellValue('C'.($linha+10), "Título");
+$getSheet->setCellValue('M'.($linha+10), "Data da Abertura");
 
 //Variáveis
-$getSheet->setCellValue('B'.($linha+11), "$numero_obs_pendente");
-$getSheet->setCellValue('D'.($linha+11), "$titulo_obs_pendente");
-$getSheet->setCellValue('N'.($linha+11), "$data_abertura_obs_pendente");
+$getSheet->setCellValue('A'.($linha+11), "$numero_obs_pendente");
+$getSheet->setCellValue('C'.($linha+11), "$titulo_obs_pendente");
+$getSheet->setCellValue('M'.($linha+11), "$data_abertura_obs_pendente");
 
 //Estilos
-$getSheet->getStyle('B'.($linha+9))->applyFromArray($color);
-$getSheet->getStyle('B'.($linha+9))->applyFromArray($style);
-$getSheet->getStyle('B'.($linha+9))->getFont()->setBold(true);
-$getSheet->getStyle('B'.($linha+10))->getFont()->setBold(true);
-$getSheet->getStyle('D'.($linha+10))->getFont()->setBold(true);
-$getSheet->getStyle('N'.($linha+10))->getFont()->setBold(true);
-$getSheet->getStyle('B'.($linha+11))->applyFromArray($esquerda);
+$getSheet->getStyle('A'.($linha+9))->applyFromArray($color);
+$getSheet->getStyle('A'.($linha+9))->applyFromArray($style);
+$getSheet->getStyle('A'.($linha+9))->getFont()->setBold(true);
+$getSheet->getStyle('A'.($linha+10))->getFont()->setBold(true);
+$getSheet->getStyle('C'.($linha+10))->getFont()->setBold(true);
+$getSheet->getStyle('M'.($linha+10))->getFont()->setBold(true);
+$getSheet->getStyle('A'.($linha+11))->applyFromArray($esquerda);
 
 //Deixar desprotegido
-$getSheet->getStyle('B'.($linha+11))->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('D'.($linha+11))->getProtection()->setLocked($desprotegido);
-$getSheet->getStyle('N'.($linha+11))->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('A'.($linha+11))->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('C'.($linha+11))->getProtection()->setLocked($desprotegido);
+$getSheet->getStyle('M'.($linha+11))->getProtection()->setLocked($desprotegido);
 
 //*************************Assinaturas**********************************
 
-$cellz = 'B'.($linha+12).':'.'O'.($linha+12);
+$cellz = 'A'.($linha+12).':'.'N'.($linha+12);
 $setSheet->mergeCells($cellz);//titulo
 
-$getSheet->getStyle('B'.($linha+12))->applyFromArray($color);
+$getSheet->getStyle('A'.($linha+12))->applyFromArray($color);
 
-$cellz = 'B'.($linha+13).':'.'H'.($linha+15);
+$cellz = 'A'.($linha+13).':'.'G'.($linha+15);
 $setSheet->mergeCells($cellz);//analista
 
-$cellz = 'B'.($linha+16).':'.'H'.($linha+16);
+$cellz = 'A'.($linha+16).':'.'G'.($linha+16);
 $setSheet->mergeCells($cellz);//
 
-$cellz = 'I'.($linha+13).':'.'O'.($linha+15);
+$cellz = 'H'.($linha+13).':'.'N'.($linha+15);
 $setSheet->mergeCells($cellz);//titulo
 
-$cellz = 'I'.($linha+16).':'.'O'.($linha+16);
+$cellz = 'H'.($linha+16).':'.'N'.($linha+16);
 $setSheet->mergeCells($cellz);//titulo
 
-$getSheet->setCellValue('B'.($linha+13), "Aceite: (Analista)");
-$getSheet->setCellValue('I'.($linha+13), "Aceite: (Cliente)");
-$getSheet->setCellValue('B'.($linha+16), "Data:");
-$getSheet->setCellValue('I'.($linha+16), "Data:");
+$getSheet->setCellValue('A'.($linha+13), "Aceite: (Analista)");
+$getSheet->setCellValue('H'.($linha+13), "Aceite: (Cliente)");
+$getSheet->setCellValue('A'.($linha+16), "Data:");
+$getSheet->setCellValue('H'.($linha+16), "Data:");
 
 //Estilos
-$getSheet->getStyle('B'.($linha+13))->applyFromArray($canto);
-$getSheet->getStyle('I'.($linha+13))->applyFromArray($canto);
-$getSheet->getStyle('B'.($linha+13))->getFont()->setBold(true);
-$getSheet->getStyle('I'.($linha+13))->getFont()->setBold(true);
-$getSheet->getStyle('B'.($linha+16))->getFont()->setBold(true);
-$getSheet->getStyle('I'.($linha+16))->getFont()->setBold(true);
+$getSheet->getStyle('A'.($linha+13))->applyFromArray($canto);
+$getSheet->getStyle('H'.($linha+13))->applyFromArray($canto);
+$getSheet->getStyle('A'.($linha+13))->getFont()->setBold(true);
+$getSheet->getStyle('H'.($linha+13))->getFont()->setBold(true);
+$getSheet->getStyle('A'.($linha+16))->getFont()->setBold(true);
+$getSheet->getStyle('H'.($linha+16))->getFont()->setBold(true);
 
 
 
 ////////////////////////////////BORDAS/////////////////////////////
-$getSheet->getStyle('B2:O2')->applyFromArray($border);
+$getSheet->getStyle('A2:N2')->applyFromArray($border);
 
-$tableBorder = 'B4:O'.($linha+16);
+$tableBorder = 'A4:N'.($linha+16);
 $getSheet->getStyle($tableBorder)->applyFromArray($border);
 
 /////////////////////////////PROTEÇÃO DE CELULA////////////////////
