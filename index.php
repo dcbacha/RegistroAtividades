@@ -62,13 +62,13 @@
 	</table>
 	<table class="table table-body table-break">
 			<tr>
-				<td width="5%">
+				<td width="5%" class="titulo">
 					<strong>Empresa:</strong>
 				</td>
 				<td width="45%">
 					<input class="form-control input-sm" type="text" name="empresa">
 				</td>
-				<td width="5%">
+				<td width="5%" class="titulo">
 					<strong>Contato:</strong>
 				</td>
 				<td width="45%">
@@ -77,13 +77,13 @@
 			</tr>
 
 			<tr>
-				<td>
+				<td class="titulo">
 					<strong>Telefone:</strong>
 				</td>
 				<td>
 					<input class="form-control input-sm" type="number" name="telefone" >
 				</td>
-				<td>
+				<td class="titulo">
 					<strong>E-mail:</strong>
 				</td>
 				<td>
@@ -91,7 +91,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td class="titulo">
 					<strong>Área:</strong>
 				</td>
 				<td colspan="3">
@@ -109,7 +109,7 @@
 	</table>
 	<table class="table table-body table-break">
 			<tr>
-				<td width="15%">
+				<td width="15%" class="titulo">
 					<strong>Código de Projeto:</strong>
 				</td>
 				<td width="85%">
@@ -120,13 +120,13 @@
 
 	<table class="table table-body table-break">
 			<tr>
-				<td width="15%">
+				<td width="15%" class="titulo">
 					<strong>Nome da Atividade:</strong>
 				</td>
 				<td>
 					<input class="form-control input-sm" type="text" name="nome-atividade">
 				</td>
-				<td width="15%">
+				<td width="15%" class="titulo">
 					<strong>Número de registro:</strong>
 				</td>
 				<td>
@@ -137,7 +137,7 @@
 
 	<table class="table table-body table-break">
 			<tr>
-				<td width="5%">
+				<td width="5%" class="titulo">
 					<strong>Módulos:</strong>
 				</td>
 				<td>
@@ -148,7 +148,7 @@
 
 	<table class="table table-body table-break">
 			<tr>
-				<td width="10%">
+				<td width="10%" class="titulo">
 					<strong>Analista/Dev:</strong>
 				</td>
 				<td>
@@ -158,13 +158,13 @@
 	</table>
 	<table class="table table-body table-break">
 			<tr>
-				<td width="5%">
+				<td width="5%" class="titulo">
 					<strong>Telefone:</strong>
 				</td>
 				<td width="45%">
 					<input class="form-control input-sm" type="number" name="telefone-servico">
 				</td>
-				<td width="8%">
+				<td width="8%" class="titulo">
 					<strong>E-mail:</strong>
 				</td>
 				<td width="42%">
@@ -174,19 +174,19 @@
 	</table>
 	<table class="table table-body table-break">
 			<tr>
-				<td width="12%" class="ajuste">
+				<td width="12%" class="ajuste titulo">
 					<strong>Data de Início:</strong>
 				</td>
 				<td width="15%">
 					<input class="form-control input-sm" type="date" name="data-inicio-servico">
 				</td>
-				<td width="10%" class="ajuste">
+				<td width="10%" class="ajuste titulo">
 					<strong>Data de Fim:</strong>
 				</td>
 				<td width="15%">
 					<input class="form-control input-sm" type="date" name="data-fim-servico">
 				</td>
-				<td width="30%"  class="ajuste">
+				<td width="30%"  class="ajuste titulo">
 					<strong>Total de Horas Trabalhadas no Projeto:</strong>
 				</td>
 				<td class="inputTotalHoras">
