@@ -1,0 +1,124 @@
+/* *******************************************css modificado****************************************** */
+.table-body, th, tr {
+    border: 1px solid black;
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-collapse: collapse;
+
+}
+
+ .table-body td {
+      border: 1px solid black;
+      border-top: 0;
+      border-collapse: collapse;
+    }
+  .borda-forte {
+    border-bottom: 7px solid black;
+  }
+
+
+
+textarea {
+    resize: vertical;
+}
+
+@media (max-width: 990px) and (min-width: 600px) { 
+  .ajuste{
+        word-wrap: break-word;
+    }
+  .inputTotalHoras{
+    min-width: 80px;
+  }
+
+}
+
+@media (max-width: 990px) and (min-width: 700px) { 
+  .ajuste{
+         font-size: .8em;
+    }
+  
+
+}
+
+@media (max-width: 700px) and (min-width: 600px) { 
+  .table-break2,
+  .table-break{
+    font-size: .8em;
+  }
+}
+
+@media (max-width: 360px) { 
+  h1{
+    font-size: 1.5em;
+  }
+   img{
+    max-width: 100%;
+  }
+}
+@media (max-width: 275px) { 
+  h1{
+    font-size: 1em;
+  }
+  img{
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) { 
+  .table-break td {
+        width: 100%;
+        display: block;
+        
+    }
+
+    .table-break2 td, th {
+        width: 100%;
+        display: block;
+        height: 60px;
+    }
+
+    .table-break2 tr {
+        display: table-cell;
+        width: 50%;
+        border-collapse: collapse;
+
+    }
+
+    .inputTextArea{
+      min-height: 70px;
+    }
+
+
+     .table-break3 td {
+        width: 100%;
+        display: block;
+        height: 50px;
+        word-wrap: break-word;
+    }
+
+    .table-break3 tr {
+        display: table-cell;
+        min-width: 100px;
+        height: 100%;
+    }
+
+     .titulo{
+      background: #eff2eb;
+    }
+
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 1px solid #000;   /* mudei a cor da borda aqui!!  */
+}
+
+
+/* ************************************ */

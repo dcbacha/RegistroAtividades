@@ -1,0 +1,75 @@
+create table servicos(
+	
+	id int auto_increment,
+
+
+	empresa varchar(255),
+	contato varchar(255),
+	telefone varchar(255),
+	email varchar(255),
+	area varchar(255),
+    
+	codigoProjeto varchar(255),
+    
+	nomeAtividade varchar(255),
+    
+	numeroRegistro int,
+    
+	modulos varchar(255),
+    
+	analista varchar(255),
+    
+	telefoneServico varchar(255),
+    
+	emailServico varchar(255),
+    
+	dataInicio varchar(255),
+    
+	dataFim varchar(255),
+    
+	totalHoras int, 
+    
+    
+	
+
+	numPendenciaPsg int,
+	tituloPendenciaPsg varchar(255),
+	prazoPendenciaPsg varchar(255),
+	numPendenciaCliente int,
+	tituloPendenciaCliente varchar(255),
+	prazoPendenciaCliente varchar(255),
+	numPendenciaInfra int,
+	tituloPendenciaInfra varchar(255),
+	dataAberturaPendenciaInfra varchar(255),
+	numObsPendente int,
+	tituloObsPendente varchar(255),
+	dataAberturaObsPendente varchar(255),
+	
+	primary key (id)
+
+);
+
+create table atividades(
+	id int auto_increment,
+	servico_id int,
+	dataAtividade varchar(255),
+	horaInicio varchar(255),
+	horaFim varchar(255),
+	descricao varchar(255),
+	opiniaoCliente varchar(255),	
+
+	primary key (id),
+	foreign key (servico_id) references servicos(id)
+)
+
+create table documentosAtividades(
+	id int auto_increment,
+	servico_id int not null,
+	name varchar(255),
+	size varchar(255),
+	type varchar(255),
+	content mediumblob,
+	
+	primary key (id),
+	foreign key (servico_id) references servicos(id)
+)
