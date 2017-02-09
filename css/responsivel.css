@@ -50,6 +50,11 @@ textarea {
   }
 }
 
+@media (max-width: 400px){
+  .button-big{ display: none; }
+  .button-small{ display: inline; }
+}
+
 @media (max-width: 360px) { 
   h1{
     font-size: 1.5em;

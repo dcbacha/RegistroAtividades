@@ -427,10 +427,10 @@
 	</table>
 
 	<table>
-		<label class="control-label">Anexar arquivos(.pdf, .txt, .png, .jpg, .doc, .docx, .xls, .xlsx, .csv)</label>
+		<label style="margin-top: 3px; padding-left: 3px;" class="control-label">Anexar arquivos(.pdf, .txt, .png, .jpg, .doc, .docx, .xls, .xlsx, .csv)</label>
 	<!--	<input type="file" class="filestyle"  name="arquivo[]" multiple id="arquivo" data-buttonBefore="true" data-buttonText="Procurar"> -->
 		
-		<input type="file" class="file"  name="files[]" multiple id="files" data-show-upload="false"  data-allowed-file-extensions='["pdf", "txt", "jgp", "png","doc", "xls", "docx", "xlsx", "csv"]' data-browse-label="Procurar" data-show-remove="false" data-browse-class="btn btn-default">
+		<input type="file" class="file"  name="files[]" multiple id="files" data-show-upload="false"  data-allowed-file-extensions='["pdf", "txt", "jgp", "png","doc", "xls", "docx", "xlsx", "csv"]' data-browse-label="Procurar" data-browse-class="btn btn-default">
 
 	</table>
 <!--******************************************************************************************************************************************-->
@@ -438,14 +438,16 @@
 	<img src="img/spinner.gif" alt="Spinner" id="spinner" hidden>
 	
 	<div class="botoes">
-	<button style="margin-top: 3px; margin-bottom: 3px;" type="submit" id="salvaBD" name="salvaBD" class="btn btn-success">
+	<button style="margin-top: 3px; margin-bottom: 3px;" type="submit" id="salvaBD" name="salvaBD" formaction="concluido.php" class="btn btn-success">
 		Salvar
 	</button>
 	<button style="margin-top: 3px; margin-bottom: 3px;" type="submit" name="pdf" formaction="SalvarParaPDF.php" class="btn btn-primary">
-		Gerar PDF
+		<span class="button-big"> Gerar PDF </span>
+		<span  class="button-small" hidden>PDF</span>
 	</button>
 	<button style="margin-top: 3px; margin-bottom: 3px;" type="submit" name="excel" formaction="SalvarParaExcel.php" class="btn btn-primary">
-		Gerar Excel
+		<span class="button-big"> Gerar Excel </span>
+		<span class="button-small" hidden>Excel</span>
 	</button>
 	<button style="margin-top: 3px; margin-bottom: 3px;"  onclick="return reload();" formnovalidate class="btn btn-danger pull-right" >
 		Cancelar
@@ -457,7 +459,7 @@
 </form>
 
 <?php
-
+/*
 
 
 
@@ -508,7 +510,7 @@ if(isset($_POST['salvaBD']) && $_FILES['files']['size'] > 0 && $_SESSION['safe']
 
 	
 } 
-
+*/
 ?>
 
 
