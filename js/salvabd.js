@@ -154,7 +154,7 @@ $("#salvaBD").click(function(){
 				},
 	        success: function(data) {
 	        	console.log("transmitidos com sucesso!");
-					console.log(data);
+				console.log(data);
 	        	}
 			})
 			.done(function(data){

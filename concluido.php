@@ -19,18 +19,7 @@
 <body style="padding-top: 10px" id="target">
 <div class="container" id="content">
 
-<div class="jumbotron">
-  <h1>Concluido</h1>
-  <p>Seu Registro de Atividades foi adicionado com sucesso</p>
-  <p><center><a class="btn btn-primary btn-lg" href="index.php" role="button">Voltar</a></center></p>
-</div>
-
-
-</div>
-</body>
-
 <?php
-
 
 
 
@@ -48,7 +37,8 @@ if(isset($_POST['salvaBD']) && $_FILES['files']['size'] > 0 && $_SESSION['safe']
 		$filename = $_FILES['files']['name'][$i];
 		$ext = pathinfo($filename, PATHINFO_EXTENSION);
 		if(!in_array($ext,$allowed) ) {
-    		echo 'extensão inválida de arquivo';
+    		//echo 'extensão inválida de arquivo';
+    		//$_SESSION['erro'] = 'Extensão inválida de arquivo';
 		}
 
 		else{
@@ -72,7 +62,7 @@ if(isset($_POST['salvaBD']) && $_FILES['files']['size'] > 0 && $_SESSION['safe']
 
 			$query = "INSERT INTO documentosAtividades (servico_id, name, size, type, content) VALUES ('$id', '$fileName', '$fileSize', '$fileType', '$content')";
 
-			mysqli_query($conexao, $query) or die('Upload de arquivos falhou');
+			mysqli_query($conexao, $query) or ($_SESSION['erro'] = 'Upload de arquivos falhou');
 		}
 		
 	}
@@ -83,3 +73,39 @@ if(isset($_POST['salvaBD']) && $_FILES['files']['size'] > 0 && $_SESSION['safe']
 } 
 
 ?>
+
+
+
+
+<?php
+
+if(isset($_SESSION['erro'])){
+	//echo $_SESSION['erro'];
+?>	
+	<div class="jumbotron">
+ 	 <h1>Algo deu errado :(</h1>
+ 	 <p>Erro: <?= $_SESSION['erro'];?></p>
+ 	 <p><center><a class="btn btn-primary btn-lg" href="index.php" role="button">Voltar</a></center></p>
+	</div>
+
+<?php
+	$_SESSION['erro'] = null;
+	//echo $_SESSION['erro'];
+}
+else{
+?>
+
+<div class="jumbotron">
+ 	 <h1>Concluido</h1>
+ 	 <p>Seu Registro de Atividades foi adicionado com sucesso!</p>
+ 	 <p><center><a class="btn btn-primary btn-lg" href="index.php" role="button">Voltar</a></center></p>
+</div>
+<?php
+}
+
+
+?>
+
+</div>
+</body>
+

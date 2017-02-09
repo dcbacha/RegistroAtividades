@@ -57,16 +57,15 @@ echo $sql;
 //$stmt = $DBcon->prepare($sql);
 //$stmt->execute();
 
-mysqli_query($conexao, $sql) or die('Error1, query failed');
+mysqli_query($conexao, $sql) or die($_SESSION['erro'] = 'Falha na conexão com banco de dados');
 
-//$erro = mysqli_error($conexao);
 //echo $erro;
 //echo 'Usuários cadastrados: ' . $cadastrados;
 
 $id = mysqli_insert_id($conexao);
 
 
-
+if($_POST["dadosAtividades"] != "[]"){
 $atividades = json_decode($_POST["dadosAtividades"],true);
 
 
@@ -88,7 +87,9 @@ foreach ($atividades as $result) {
 $sql2 = substr($sql2, 0, -1);
 echo $sql2;
 
-mysqli_query($conexao, $sql2) or die('Error2, query failed');
+mysqli_query($conexao, $sql2) or die($_SESSION['erro'] = 'Falha na conexão com banco de dados de atividades');
+}
+
 
 $_SESSION['id'] = $id;
 
