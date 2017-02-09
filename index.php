@@ -11,6 +11,7 @@
 	<meta name="keywords" content="">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/responsivel.css">
+	<link rel="stylesheet" href="css/estilos.css">
 
 	<link href="css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
 

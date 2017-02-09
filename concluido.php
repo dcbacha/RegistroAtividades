@@ -84,7 +84,7 @@ if(isset($_SESSION['erro'])){
 ?>	
 	<div class="jumbotron">
  	 <h1>Algo deu errado :(</h1>
- 	 <p>Erro: <?= $_SESSION['erro'];?></p>
+ 	 <p>Erro: <?= $_SESSION['erro'];?>.</p>
  	 <p><center><a class="btn btn-primary btn-lg" href="index.php" role="button">Voltar</a></center></p>
 	</div>
 
@@ -96,8 +96,8 @@ else{
 ?>
 
 <div class="jumbotron">
- 	 <h1>Concluido</h1>
- 	 <p>Seu Registro de Atividades foi adicionado com sucesso!</p>
+ 	 <h1>Concluído!</h1>
+ 	 <p>Seu Registro de Atividades foi adicionado com sucesso.</p>
  	 <p><center><a class="btn btn-primary btn-lg" href="index.php" role="button">Voltar</a></center></p>
 </div>
 <?php

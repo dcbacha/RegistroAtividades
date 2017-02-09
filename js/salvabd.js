@@ -159,7 +159,7 @@ $("#salvaBD").click(function(){
 			})
 			.done(function(data){
 				console.log("finalizado!");
-				$("#spinner").toggle();
+				//$("#spinner").toggle();
 				}); 
 
 
